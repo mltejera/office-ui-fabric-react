@@ -9,6 +9,8 @@ import { IOverflowSet, IOverflowSetItemProps, IOverflowSetProps, IOverflowSetSty
 
 const getClassNames = classNamesFunction<IOverflowSetStyleProps, IOverflowSetStyles>();
 
+const isReversedDefaultValue: boolean = false;
+
 export class OverflowSetBase extends BaseComponent<IOverflowSetProps, {}> implements IOverflowSet {
   public static defaultProps: Pick<IOverflowSetProps, 'vertical' | 'role'> = {
     vertical: false,
@@ -32,7 +34,17 @@ export class OverflowSetBase extends BaseComponent<IOverflowSetProps, {}> implem
   }
 
   public render(): JSX.Element {
-    const { items, overflowItems, className, focusZoneProps, styles, vertical, role, doNotContainWithinFocusZone } = this.props;
+    const {
+      items,
+      overflowItems,
+      className,
+      focusZoneProps,
+      styles,
+      vertical,
+      role,
+      doNotContainWithinFocusZone,
+      isReversed = isReversedDefaultValue
+    } = this.props;
 
     this._classNames = getClassNames(styles, { className, vertical });
 
@@ -57,8 +69,9 @@ export class OverflowSetBase extends BaseComponent<IOverflowSetProps, {}> implem
 
     return (
       <Tag {...uniqueComponentProps} className={this._classNames.root} role={role}>
-        {items && this._onRenderItems(items)}
+        {!isReversed && items && this._onRenderItems(items)}
         {overflowItems && overflowItems.length > 0 && this._onRenderOverflowButtonWrapper(overflowItems)}
+        {isReversed && items && this._onRenderItems(items)}
       </Tag>
     );
   }
@@ -143,6 +156,12 @@ export class OverflowSetBase extends BaseComponent<IOverflowSetProps, {}> implem
   }
 
   private _onRenderItems = (items: IOverflowSetItemProps[]): JSX.Element[] => {
+    const { isReversed = isReversedDefaultValue } = this.props;
+
+    if (isReversed) {
+      items = items.slice(0).reverse();
+    }
+
     return items.map((item, i) => {
       const wrapperDivProps: React.HTMLProps<HTMLDivElement> = {
         className: this._classNames.item

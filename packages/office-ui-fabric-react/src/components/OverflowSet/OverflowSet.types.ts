@@ -54,6 +54,12 @@ export interface IOverflowSetProps extends React.ClassAttributes<OverflowSetBase
   vertical?: boolean;
 
   /**
+   * Reverses the DOM order of the components to enable RTL visual behavior but maintain proper LTR keyboard navigation
+   * @defaultvalue false.
+   */
+  isReversed?: boolean;
+
+  /**
    * An array of items to be passed to overflow contextual menu
    */
   overflowItems?: IOverflowSetItemProps[];

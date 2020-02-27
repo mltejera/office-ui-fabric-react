@@ -3,6 +3,7 @@ import { OverflowSetCustomExample } from './examples/OverflowSet.Custom.Example'
 
 import { IDocPageProps } from '../../common/DocPage.types';
 import { OverflowSetBasicExample } from './examples/OverflowSet.Basic.Example';
+import { OverflowSetReversedBasicExample } from './examples/OverflowSet.ReversedBasic.Example';
 import { OverflowSetVerticalExample } from './examples/OverflowSet.Vertical.Example';
 
 const OverflowSetCustomExampleCode = require('!raw-loader!office-ui-fabric-react/src/components/OverflowSet/examples/OverflowSet.Custom.Example.tsx') as string;
@@ -11,6 +12,8 @@ const OverflowSetBasicExampleCode = require('!raw-loader!office-ui-fabric-react/
 const OverflowSetBasicExampleCodepen = require('!@uifabric/codepen-loader!office-ui-fabric-react/src/components/OverflowSet/examples/OverflowSet.Basic.Example.tsx') as string;
 const OverflowSetVerticalExampleCode = require('!raw-loader!office-ui-fabric-react/src/components/OverflowSet/examples/OverflowSet.Vertical.Example.tsx') as string;
 const OverflowSetVerticalExampleCodepen = require('!@uifabric/codepen-loader!office-ui-fabric-react/src/components/OverflowSet/examples/OverflowSet.Vertical.Example.tsx') as string;
+const OverflowSetReversedBasicExampleCode = require('!@uifabric/codepen-loader!office-ui-fabric-react/src/components/OverflowSet/examples/OverflowSet.ReversedBasic.Example.tsx') as string;
+const OverflowSetReversedBasicExampleCodepen = require('!@uifabric/codepen-loader!office-ui-fabric-react/src/components/OverflowSet/examples/OverflowSet.Vertical.Example.tsx') as string;
 
 export const OverflowSetPageProps: IDocPageProps = {
   title: 'OverflowSet',
@@ -35,6 +38,12 @@ export const OverflowSetPageProps: IDocPageProps = {
       code: OverflowSetCustomExampleCode,
       codepenJS: OverflowSetCustomExampleCodepen,
       view: <OverflowSetCustomExample />
+    },
+    {
+      title: 'OverflowSet Reversed Example',
+      code: OverflowSetReversedBasicExampleCode,
+      codepenJS: OverflowSetReversedBasicExampleCodepen,
+      view: <OverflowSetReversedBasicExample />
     }
   ],
   overview: require<string>('!raw-loader!office-ui-fabric-react/src/components/OverflowSet/docs/OverflowSetOverview.md'),
