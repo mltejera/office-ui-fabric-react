@@ -10,6 +10,11 @@ export type NavItemSlots = {
    * Icon that renders before the content.
    */
   icon?: Slot<'span'>;
+
+  /**
+   * Actions slot that renders after the content.
+   */
+  actions?: Slot<'div'>;
 };
 
 /**

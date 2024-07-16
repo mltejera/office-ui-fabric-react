@@ -23,10 +23,11 @@ export const navItemTokens = {
  * Shared across NavItem, NavCategoryItem, and NavSubItem
  */
 export const useRootDefaultClassName = makeResetStyles({
-  display: 'flex',
+  display: 'grid',
+  gridTemplateColumns: 'auto 1fr auto',
   textTransform: 'none',
   position: 'relative',
-  justifyContent: 'start',
+  justifyItems: 'start',
   gap: tokens.spacingVerticalL,
   padding: `${tokens.spacingVerticalMNudge} ${tokens.spacingHorizontalS} ${tokens.spacingVerticalMNudge} ${tokens.spacingHorizontalMNudge}`,
   backgroundColor: navItemTokens.backgroundColor,
@@ -80,7 +81,7 @@ export const useIndicatorStyles = makeStyles({
         '100%': { background: tokens.colorCompoundBrandForeground1 },
       },
 
-      marginInlineStart: `-${navItemTokens.indicatorOffset}px`,
+      marginTop: `10px`,
       backgroundColor: tokens.colorCompoundBrandForeground1,
       height: `${navItemTokens.indicatorHeight}px`,
       width: `${navItemTokens.indicatorWidth}px`,

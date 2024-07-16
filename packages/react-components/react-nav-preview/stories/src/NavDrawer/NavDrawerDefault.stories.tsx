@@ -14,7 +14,17 @@ import {
   NavSubItemGroup,
 } from '@fluentui/react-nav-preview';
 import { DrawerProps } from '@fluentui/react-drawer';
-import { Label, Radio, RadioGroup, Switch, Tooltip, makeStyles, tokens, useId } from '@fluentui/react-components';
+import {
+  Button,
+  Label,
+  Radio,
+  RadioGroup,
+  Switch,
+  Tooltip,
+  makeStyles,
+  tokens,
+  useId,
+} from '@fluentui/react-components';
 import {
   Board20Filled,
   Board20Regular,
@@ -43,6 +53,8 @@ import {
   PreviewLink20Filled,
   PreviewLink20Regular,
   bundleIcon,
+  PinRegular,
+  Pin20Regular,
 } from '@fluentui/react-icons';
 
 const useStyles = makeStyles({
@@ -103,12 +115,14 @@ export const NavDrawerDefault = (props: Partial<NavDrawerProps>) => {
     );
   };
 
+  const pinIconButton = <Button size={'small'} appearance="transparent" icon={<Pin20Regular />} />;
+
   return (
     <div className={styles.root}>
       <NavDrawer defaultSelectedValue="2" defaultSelectedCategoryValue="1" open={isOpen} type={type}>
         <NavDrawerHeader>{renderHamburgerWithToolTip()}</NavDrawerHeader>
         <NavDrawerBody>
-          <NavItem href={linkDestination} icon={<Dashboard />} value="1">
+          <NavItem href={linkDestination} icon={<Dashboard />} actions={pinIconButton} value="1">
             Dashboard
           </NavItem>
           <NavItem href={linkDestination} icon={<Announcements />} value="2">

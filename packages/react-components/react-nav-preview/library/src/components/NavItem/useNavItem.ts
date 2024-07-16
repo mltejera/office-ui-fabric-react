@@ -21,6 +21,8 @@ export const useNavItem_unstable = (
 ): NavItemState => {
   const { onClick, value, icon, as, href } = props;
 
+  const actions = slot.optional(props.actions, { elementType: 'div' });
+
   const { selectedValue, onRegister, onUnregister, onSelect, size = 'medium' } = useNavContext_unstable();
 
   const rootElementType = as || (href ? 'a' : 'button');
@@ -69,7 +71,7 @@ export const useNavItem_unstable = (
   }, [onRegister, onUnregister, innerRef, value]);
 
   return {
-    components: { root: rootElementType, icon: 'span' },
+    components: { root: rootElementType, icon: 'span', actions: 'div' },
     root,
     icon: slot.optional(icon, {
       elementType: 'span',
@@ -77,5 +79,6 @@ export const useNavItem_unstable = (
     selected,
     value,
     size,
+    actions,
   };
 };
