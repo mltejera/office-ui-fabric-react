@@ -1968,5 +1968,9 @@ export {
   _ctrlTreePaddingTextTop,
   _nullBackgroundColorHover,
   _nullBackgroundColorPressed,
+  _ctrlTooltipPaddingLeft,
+  _ctrlTooltipPaddingRight,
+  _ctrlTooltipPaddingTop,
+  _ctrlTooltipPaddingBottom,
 } from './legacyVariant/tokens';
 export { kumoSemanticTokens } from './themes/kumoTheme';

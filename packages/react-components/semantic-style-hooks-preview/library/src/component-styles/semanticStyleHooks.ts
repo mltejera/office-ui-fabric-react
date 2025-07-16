@@ -70,6 +70,7 @@ import {
   useSemanticBreadcrumbItemStyles,
 } from './Breadcrumb';
 import { useSemanticSpinButtonStyles } from './SpinButton';
+import { useSemanticTooltipStyles } from './Tooltip';
 
 export const SEMANTIC_STYLE_HOOKS: FluentProviderCustomStyleHooks = {
   // Accordion styles
@@ -136,6 +137,8 @@ export const SEMANTIC_STYLE_HOOKS: FluentProviderCustomStyleHooks = {
   // Tabs styles
   useTabStyles_unstable: useSemanticTabStyles,
   useTabListStyles_unstable: useSemanticTabListStyles,
+  //Tooltip styles
+  useTooltipStyles_unstable: useSemanticTooltipStyles,
   // Slider styles
   useSliderStyles_unstable: useSemanticSliderStyles,
   // Menu styles
