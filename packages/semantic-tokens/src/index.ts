@@ -1956,6 +1956,11 @@ export {
   _ctrlTabSizeDefault,
   _ctrlTabSmGapInsideDefault,
   _ctrlTabSmPaddingHorizontalDefault,
+  _ctrlTooltipPaddingBottom,
+  _ctrlTooltipPaddingLeft,
+  _ctrlTooltipPaddingRight,
+  _ctrlTooltipPaddingTop,
+  _ctrlTooltipShadow,
   _ctrlTreeGapInsideDefault,
   _ctrlTreeIconOnSubtle,
   _ctrlTreeIconOnSubtleHover,
@@ -1968,9 +1973,5 @@ export {
   _ctrlTreePaddingTextTop,
   _nullBackgroundColorHover,
   _nullBackgroundColorPressed,
-  _ctrlTooltipPaddingLeft,
-  _ctrlTooltipPaddingRight,
-  _ctrlTooltipPaddingTop,
-  _ctrlTooltipPaddingBottom,
 } from './legacyVariant/tokens';
 export { kumoSemanticTokens } from './themes/kumoTheme';

@@ -134,11 +134,6 @@ export const SEMANTIC_STYLE_HOOKS: FluentProviderCustomStyleHooks = {
   useMessageBarBodyStyles_unstable: useSemanticMessageBarBodyStyles,
   useMessageBarActionsStyles_unstable: useSemanticMessageBarActionsStyles,
   useMessageBarTitleStyles_unstable: useSemanticMessageBarTitleStyles,
-  // Tabs styles
-  useTabStyles_unstable: useSemanticTabStyles,
-  useTabListStyles_unstable: useSemanticTabListStyles,
-  //Tooltip styles
-  useTooltipStyles_unstable: useSemanticTooltipStyles,
   // Slider styles
   useSliderStyles_unstable: useSemanticSliderStyles,
   // Menu styles
@@ -161,4 +156,9 @@ export const SEMANTIC_STYLE_HOOKS: FluentProviderCustomStyleHooks = {
   useBreadcrumbItemStyles_unstable: useSemanticBreadcrumbItemStyles,
   // SpinButton styles
   useSpinButtonStyles_unstable: useSemanticSpinButtonStyles,
+  // Tabs styles
+  useTabStyles_unstable: useSemanticTabStyles,
+  useTabListStyles_unstable: useSemanticTabListStyles,
+  //Tooltip styles
+  useTooltipStyles_unstable: useSemanticTooltipStyles,
 };
